@@ -2,9 +2,6 @@ import { defineNuxtConfig } from 'nuxt'
 
 export default defineNuxtConfig({
   meta: {
-    htmlAttrs: {
-      dir: 'rtl'
-    },
     title: 'JRI - TODO List',
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -24,14 +21,9 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxtjs/tailwindcss',
-    '@formkit/nuxt',
     '@vueuse/nuxt',
     '@pinia/nuxt'
   ],
-  formkit: {
-    defaultConfig: true,
-    configFile: '~/formkit.config.ts'
-  },
   tailwindcss: {
     viewer: false
   }
