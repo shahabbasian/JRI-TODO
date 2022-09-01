@@ -13,18 +13,19 @@ export const useTodo = defineStore('todo', {
     addTodo (title) {
       this.list.push({
         title,
-        completed: false
+        completed: false,
+        id: Date.now()
       })
     },
-    setComplete (index) {
-      this.list.map((item, key) => {
-        if (key === index) {
+    setComplete (id) {
+      this.list.map((item) => {
+        if (item.id === id) {
           item.completed = !item.completed
         }
       })
     },
-    deleteTodo (index) {
-      this.list.splice(index, 1)
+    deleteTodo (id) {
+      this.list = this.list.filter(item => item.id !== id)
     },
     clearComplete () {
       this.list = this.list.filter(item => !item.completed)

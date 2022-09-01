@@ -9,15 +9,15 @@
         </div>
 
         <div class="flex gap-3 text-sm">
-          <div class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index' }">
+          <NuxtLink to="/" class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index' }">
             <span>All</span>
-          </div>
-          <div class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index-active' }">
+          </NuxtLink>
+          <NuxtLink to="/active" class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index-active' }">
             <span>Active</span>
-          </div>
-          <div class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index-completed' }">
+          </NuxtLink>
+          <NuxtLink to="/completed" class="cursor-pointer" :class="{ 'text-slate-500': route.name !== 'index-completed' }">
             <span>Completed</span>
-          </div>
+          </NuxtLink>
         </div>
 
         <div class="text-xs cursor-pointer" @click="todo.clearComplete()">

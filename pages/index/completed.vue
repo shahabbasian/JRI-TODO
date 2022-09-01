@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
-    <div v-if="todo.allTodo.length > 0" class="flex flex-col">
-      <div v-for="item in todo.allTodo" :key="item.id" class="cursor-pointer py-3 px-4 border-b flex justify-between gap-3 group" @click="todo.setComplete(item.id)">
+    <div v-if="todo.completedTodo.length > 0" class="flex flex-col">
+      <div v-for="item in todo.completedTodo" :key="item.id" class="cursor-pointer py-3 px-4 border-b flex justify-between gap-3 group" @click="todo.setComplete(item.id)">
         <div
           class="flex-none border border-slate-500 opacity-50 h-5 w-5 rounded-full"
           :class="{
