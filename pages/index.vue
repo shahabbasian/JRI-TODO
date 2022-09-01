@@ -1,6 +1,7 @@
 <template>
   <div class="px-4 flex flex-col gap-6 justify-center items-center">
     <div class="w-full -mt-10 z-50 sm:w-[28rem] rounded-md shadow-lg -top-5 bg-white flex flex-col">
+      <NuxtLoadingIndicator />
       <NuxtChild />
 
       <div class="flex flex-col gap-3 sm:gap-0 sm:flex-row px-4 py-3 border-t justify-center sm:justify-between items-center">
