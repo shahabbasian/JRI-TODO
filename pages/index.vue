@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 flex justify-center">
+  <div class="px-4 flex flex-col gap-6 justify-center items-center">
     <div class="w-full -mt-10 z-50 sm:w-[28rem] rounded-md shadow-lg -top-5 bg-white flex flex-col">
       <NuxtChild />
 
@@ -34,6 +34,9 @@
           <span>Clear Completed</span>
         </div>
       </div>
+    </div>
+    <div class="text-sm text-slate-500">
+      <span>JRI Todo &copy;</span>
     </div>
   </div>
 </template>

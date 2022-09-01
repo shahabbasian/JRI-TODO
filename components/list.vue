@@ -22,17 +22,20 @@
         </transition-group>
       </div>
       <div v-else class="flex justify-center items-center px-4 py-3 text-slate-500">
-        <span>Woohoo! nothing left todo.</span>
+        <span>Woohoo! nothing left&nbsp;</span>
+        <span v-if="route.name === 'index-active'">Active todo.</span>
+        <span v-else-if="route.name === 'index-completed'">Completed todo.</span>
+        <span v-else>todo.</span>
       </div>
     </transition>
   </div>
 </template>
-
 <script setup>
 defineProps({
   todos: { type: Array, required: true }
 })
 
+const route = useRoute()
 const todo = useTodo()
 </script>
 
