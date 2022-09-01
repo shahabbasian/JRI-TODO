@@ -15,6 +15,13 @@ export const useTodo = defineStore('todo', {
         title,
         completed: false
       })
+    },
+    setComplete (index) {
+      this.list.map((item, key) => {
+        if (key === index) {
+          item.completed = !item.completed
+        }
+      })
     }
   }
 })
