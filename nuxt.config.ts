@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       { name: 'theme-color', content: '#192f64' }
     ]
   },
+  autoImports: {
+    imports: [
+      { name: 'useTodo', from: '@/stores/todo' }
+    ]
+  },
   css: [
     '~/assets/css/fontiran.css'
   ],
