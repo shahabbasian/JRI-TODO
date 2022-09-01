@@ -1,10 +1,10 @@
 <template>
   <div class="px-4 flex justify-center">
-    <div class="w-full -mt-10 z-50 md:w-[28rem] rounded-md shadow-lg -top-5 bg-white flex flex-col">
+    <div class="w-full -mt-10 z-50 sm:w-[28rem] rounded-md shadow-lg -top-5 bg-white flex flex-col">
       <NuxtChild />
 
-      <div class="flex px-4 py-3 border-t justify-between items-center">
-        <div class="text-xs">
+      <div class="flex flex-col gap-3 sm:gap-0 sm:flex-row px-4 py-3 border-t justify-center sm:justify-between items-center">
+        <div class="hidden sm:flex text-xs">
           <span>{{ todo.activeTodo.length }} items left</span>
         </div>
 
@@ -20,7 +20,17 @@
           </NuxtLink>
         </div>
 
-        <div class="text-xs cursor-pointer" @click="todo.clearComplete()">
+        <div class="sm:hidden w-full flex justify-between items-center">
+          <div class="text-xs">
+            <span>{{ todo.activeTodo.length }} items left</span>
+          </div>
+
+          <div class="text-xs cursor-pointer" @click="todo.clearComplete()">
+            <span>Clear Completed</span>
+          </div>
+        </div>
+
+        <div class="hidden sm:flex text-xs cursor-pointer" @click="todo.clearComplete()">
           <span>Clear Completed</span>
         </div>
       </div>
