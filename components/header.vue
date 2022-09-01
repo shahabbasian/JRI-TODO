@@ -6,7 +6,7 @@
         bg-gradient-to-br from-purple-500 to-sky-500 opacity-50
       "
     />
-    <div class="absolute mb-10 flex flex-col px-4 w-full md:w-[30rem] items-start gap-6">
+    <div class="absolute mb-16 flex flex-col px-4 w-full md:w-[30rem] items-start gap-6">
       <div class="text-4xl font-bold">
         <span class="tracking-[0.4em] text-white">TODO</span>
       </div>

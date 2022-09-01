@@ -14,7 +14,9 @@ const todo = useTodo()
 const createEl = ref(null)
 
 const submitHandler = () => {
-  todo.addTodo(createEl.value.value)
-  createEl.value.value = ''
+  if (createEl.value.value) {
+    todo.addTodo(createEl.value.value)
+    createEl.value.value = ''
+  }
 }
 </script>
