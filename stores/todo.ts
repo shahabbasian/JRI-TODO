@@ -25,6 +25,9 @@ export const useTodo = defineStore('todo', {
     },
     deleteTodo (index) {
       this.list.splice(index, 1)
+    },
+    clearComplete () {
+      this.list = this.list.filter(item => !item.completed)
     }
   }
 })

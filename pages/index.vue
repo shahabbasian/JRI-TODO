@@ -20,7 +20,7 @@
           </div>
         </div>
 
-        <div class="text-xs cursor-pointer">
+        <div class="text-xs cursor-pointer" @click="todo.clearComplete()">
           <span>Clear Completed</span>
         </div>
       </div>
