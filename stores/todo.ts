@@ -22,6 +22,9 @@ export const useTodo = defineStore('todo', {
           item.completed = !item.completed
         }
       })
+    },
+    deleteTodo (index) {
+      this.list.splice(index, 1)
     }
   }
 })
